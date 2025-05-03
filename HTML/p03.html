@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operaciones Aritméticas</title>
+  <link rel="stylesheet" href="https://webpracticas.netlify.app/css/estilos.css">
+  <link rel="stylesheet" href="https://webpracticas.netlify.app/css/formulario.css">
+</head>
+<body>
+  <div id="contenido">
+    <header id="encabezado">
+      <div style="text-align: center;">
+        <h2>Prácticas JavaScript</h2>
+        <h3>Operaciones Aritméticas</h3>
+      </div>
+    </header>
+
+    <section class="tarjeta">
+      <img class="img" src="/img/practicas/Operaciones_basicas_de_matematicas.webp" alt="Imagen de operaciones">
+
+      <select name="" id="opciones">
+        <option value="1">Suma</option>
+        <option value="2">Resta</option>
+        <option value="3">Multiplicación</option>
+        <option value="4">División</option>
+      </select>
+
+      <p id="resultado" class="descripcion">
+        <!-- Aquí se mostrará el resultado -->
+      </p>
+
+      <input type="number" name="txtNum1" id="txtNum1" placeholder="Número 1"> <br>
+
+      <label id="lblOperador" for="txtNum2">+</label><br>
+
+      <input type="number" name="txtNum2" id="txtNum2" placeholder="Número 2"> <br>
+
+      <button id="btnCalcular">Realizar Operación</button>
+    </section>
+  </div>
+
+  <script src="/js/p03.js"></script>
+</body>
+</html>
