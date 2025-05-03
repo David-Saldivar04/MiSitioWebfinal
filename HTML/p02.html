@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica 01 JavaScript</title>
+  <style>
+    #parrafo {
+      padding: 10px;
+      background-color: lightgray;
+      transition: background-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <center>
+    <h2>Práctica 02 JavaScript</h2>
+  </center>
+</header>
+
+<section>
+  <p id="parrafo">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum esse, vel voluptatibus nam suscipit reprehenderit facilis facere ut quo architecto nulla quibusdam? Excepturi sunt voluptate eaque quaerat. Corrupti, assumenda facilis.
+  </p>
+
+  <hr>
+
+  <button id="btnMayusculas">Mayúsculas</button>
+  <button id="btnMinusculas">Minúsculas</button>
+
+  <label for="txtTexto">Agregar texto:</label>
+  <input type="text" id="txtTexto">
+  <button id="btnAgregar">Agregar</button>
+</section>
+
+<script>
+  const parrafo = document.getElementById("parrafo");
+  const btnMayusculas = document.getElementById("btnMayusculas");
+  const btnMinusculas = document.getElementById("btnMinusculas");
+  const btnAgregar = document.getElementById("btnAgregar");
+  const inputTexto = document.getElementById("txtTexto");
+
+  // Cambiar color de fondo al pasar el cursor
+  parrafo.addEventListener("mouseover", () => {
+    parrafo.style.backgroundColor = "lightblue";
+  });
+
+  parrafo.addEventListener("mouseout", () => {
+    parrafo.style.backgroundColor = "lightgray";
+  });
+
+  // Convertir a mayúsculas
+  btnMayusculas.addEventListener("click", () => {
+    parrafo.textContent = parrafo.textContent.toUpperCase();
+  });
+
+  // Convertir a minúsculas
+  btnMinusculas.addEventListener("click", () => {
+    parrafo.textContent = parrafo.textContent.toLowerCase();
+  });
+
+  // Agregar texto del input al párrafo
+  btnAgregar.addEventListener("click", () => {
+    const texto = inputTexto.value.trim();
+    if (texto) {
+      parrafo.textContent += " " + texto;
+      inputTexto.value = "";
+    }
+  });
+</script>
+
+</body>
+</html>
